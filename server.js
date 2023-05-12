@@ -19,7 +19,7 @@ let botsArr = bots;
 // include and initialize the rollbar library with your access token
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
-  accessToken: "f94d20caa97b4a32ade61447ba7be4e4",
+  accessToken: ROLLBAR_ACCESS_TOKEN,
   captureUncaught: true,
   captureUnhandledRejections: true,
 });
