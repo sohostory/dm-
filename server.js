@@ -1,6 +1,7 @@
 const express = require("express");
 const bots = require("./src/botsData");
 const shuffle = require("./src/shuffle");
+require("dotenv").config();
 
 const playerRecord = {
   wins: 0,
@@ -10,6 +11,8 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static("public"));
+
+const { ROLLBAR_ACCESS_TOKEN } = process.env;
 
 let botsArr = bots;
 
